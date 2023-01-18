@@ -1,0 +1,38 @@
+h1, h3{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+
+	font-family: 'Roboto', sans-serif;
+}
+p{
+	width: 100%;
+	text-align: center;
+}
+table{
+	margin: auto;
+	border: 2px solid #000;
+}
+th{
+	width: 30px;
+	height: 30px;
+	padding: 0;
+	background-color: #000;
+}
+
+.white{
+	background-color: #FFF;
+}
+footer{
+	height: 28px;
+	background-color: #2d3436;
+	text-align: center;
+	color: #FFF;
+	font-family: Arial;
+	margin: auto;
+	padding: 12px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}

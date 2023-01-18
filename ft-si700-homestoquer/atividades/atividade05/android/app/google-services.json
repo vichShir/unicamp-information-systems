@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "951498479015",
+    "firebase_url": "https://si7001s2022-b1472-default-rtdb.firebaseio.com",
+    "project_id": "si7001s2022-b1472",
+    "storage_bucket": "si7001s2022-b1472.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:951498479015:android:87332b5246a3758e751282",
+        "android_client_info": {
+          "package_name": "shirasuna.ft.unicamp.br"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "951498479015-rdh7ornsq4tihvp4k5kur3hf87quib3j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQKWFjIbpC5V1nEKkaJsVHFVkyP8KFQFk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "951498479015-rdh7ornsq4tihvp4k5kur3hf87quib3j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

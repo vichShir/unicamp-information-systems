@@ -1,0 +1,32 @@
+/* Corpo principal */
+body{
+	background-color: rgba(255, 234, 167, 0.7);
+}
+
+/* Tabela */
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th{
+	border: 1px solid #2d3436;
+	text-align: center;
+	padding: 8px;
+}
+
+td {
+	border: 1px solid #2d3436;
+	text-align: left;
+	padding: 8px;
+}
+
+tr:nth-child(even) {
+	background-color: rgba(253, 203, 110, 0.7);
+}
+
+h4, p, th{
+	color: #fff;
+	text-shadow: 1px 1px 2px black;
+}

@@ -1,0 +1,133 @@
+/**
+ * Author: Victor Yukio Shirasuna, RA: 245155
+ * Folha de Estilo para Cadastro de Alunos com PHP
+ */
+
+body{
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+header{
+	width: 160px;
+	height: 100vh;
+	position: fixed;
+	background-color: #079992;
+	float: left;
+	text-align: center;
+}
+
+ul{
+	padding: 0;
+}
+
+li{
+	font-family: 'Arial';
+	font-size: 18px;
+	list-style-type: none;
+	margin-top: 8px;
+}
+
+a{
+	text-decoration: none;
+	color: #FFF;
+}
+
+h1{
+	font-size: 2em;
+	margin-bottom: 0;
+}
+
+h2{
+	font-family: 'Arial';
+	color: #FFF;
+}
+
+h3{
+	margin-top: 32px;
+	margin-bottom: 0;
+}
+
+hr{
+	width: 200px;
+	border: 1px solid #FFF;
+	box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
+form{
+	margin-top: 30px;
+}
+
+input{
+	padding: 6px 20px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-weight: bold;
+}
+
+p{
+	margin-bottom: 8px;
+}
+
+button{
+	width: 120px;
+	height: 30px;
+	background-color: #2ecc71;
+	color: #FFF;
+	border: none;
+	font-weight: bold;
+}
+
+footer{
+	height: 28px;
+	margin-top: 97px;
+	background-color: #2d3436;
+	text-align: center;
+	color: #FFF;
+	font-family: Arial;
+	padding: 12px;
+}
+
+.form-elem{
+	display: grid;
+	width: 50%;
+	margin: auto;
+	padding: 10px;
+	text-align: left;
+}
+
+.form-subelem{
+	display: inline;
+	width: 50%;
+	margin: auto;
+	padding: 8px;
+}
+
+#form-button{
+	width: 240px;
+	height: 50px;
+	background-color: #e67e22;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0 0 0;
+	border: none;
+	border-radius: 4px;
+	font-size: 1.05em;
+}
+
+.sec-cadastro, .sec-registros{
+	width: 40%;
+	height: auto;
+	background-color: #38ada9;
+	margin: auto auto 50px auto;
+	margin-top: 4%;
+	text-align: center;
+	padding: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	font-family: 'Arial';
+	color: #FFF;
+}

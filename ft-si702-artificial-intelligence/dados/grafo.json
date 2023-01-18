@@ -1,0 +1,132 @@
+{
+  "adjac_list": [
+    {
+      "Mer": [
+        {
+          "to": "Ter",
+          "value": 20.94
+        },
+        {
+          "to": "Ven",
+          "value": 29.8
+        },
+        {
+          "to": "Mar",
+          "value": 39.73
+        },
+        {
+          "to": "Sat",
+          "value": 126.13
+        }
+      ]
+    },
+    {
+      "Ven": [
+        {
+          "to": "Ter",
+          "value": 24.53
+        },
+        {
+          "to": "Net",
+          "value": 360.88
+        },
+        {
+          "to": "Ura",
+          "value": 248.81
+        },
+        {
+          "to": "Mar",
+          "value": 56.39
+        },
+        {
+          "to": "Mer",
+          "value": 29.8
+        }
+      ]
+    },
+    {
+      "Ter": [
+        {
+          "to": "Mer",
+          "value": 20.94
+        },
+        {
+          "to": "Ven",
+          "value": 24.53
+        }
+      ]
+    },
+    {
+      "Mar": [
+        {
+          "to": "Ven",
+          "value": 56.39
+        },
+        {
+          "to": "Ura",
+          "value": 300.24
+        },
+        {
+          "to": "Jup",
+          "value": 143.81
+        },
+        {
+          "to": "Sat",
+          "value": 194.07
+        },
+        {
+          "to": "Mer",
+          "value": 39.73
+        }
+      ]
+    },
+    {
+      "Jup": [
+        {
+          "to": "Mar",
+          "value": 143.81
+        },
+        {
+          "to": "Sat",
+          "value": 389.25
+        }
+      ]
+    },
+    {
+      "Sat": [
+        {
+          "to": "Jup",
+          "value": 389.25
+        },
+        {
+          "to": "Mar",
+          "value": 194.07
+        },
+        {
+          "to": "Mer",
+          "value": 126.13
+        }
+      ]
+    },
+    {
+      "Ura": [
+        {
+          "to": "Ven",
+          "value": 248.81
+        },
+        {
+          "to": "Mar",
+          "value": 300.24
+        }
+      ]
+    },
+    {
+      "Net": [
+        {
+          "to": "Ven",
+          "value": 360.88
+        }
+      ]
+    }
+  ]
+}

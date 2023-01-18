@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="styles/style.css">
+		<title>Jogo da Velha - Unidades 9 e 10</title>
+	</head>
+	<body>
+
+		<section>
+			<h1>Jogo da Velha</h1>
+			<hr>
+			<p id="vez-jogador"></p>
+			<table>
+				<tr>
+					<td id="tb11" onclick='turn("tb11")'></td>
+					<td id="tb12" class="ver-line" onclick='turn("tb12")'></td>
+					<td id="tb13" onclick='turn("tb13")'></td>
+				</tr>
+				<tr>
+					<td id="tb21" class="hor-line" onclick='turn("tb21")'></td>
+					<td id="tb22" class="hor-line ver-line" onclick='turn("tb22")'></td>
+					<td id="tb23" class="hor-line" onclick='turn("tb23")'></td>
+				</tr>
+				<tr>
+					<td id="tb31" onclick='turn("tb31")'></td>
+					<td id="tb32" class="ver-line" onclick='turn("tb32")'></td>
+					<td id="tb33" onclick='turn("tb33")'></td>
+				</tr>
+			</table>
+			<script src="scripts/tictactoe.js"></script>
+		</section>
+
+		<footer>
+			by Victor Yukio Shirasuna - FT Unicamp 2021
+		</footer>
+		
+	</body>
+</html>

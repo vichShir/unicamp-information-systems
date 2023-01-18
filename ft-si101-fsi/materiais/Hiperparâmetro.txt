@@ -1,0 +1,36 @@
+1 - Aprendido no treino
+	* Regressão
+		- y = ax + b
+		- a  -> fit()
+		- b  -> fit()
+	* Decision Tree
+		- Se x < y
+		- vai para A ou para B
+
+
+**Hiperparâmetros**
+
+* fir_intercept = true, false
+
+* MLP (Rede Neural)
+	- Quantos nós
+	- Quantas camadas
+
+* class_weight (Banco de Dados desbalanceado)
+	Exemplo:
+		- 80% -> A	(acertos em A: 0.2)
+		- 20% -> B	(acertos em B: 0.8)
+		- Balanceio para B (prioridade)
+
+
+**Validação Cruzada**
+	- Utilizá-lo para evitar de utilizar o de "Teste"
+	1. Pegue o Banco de Dados e divida-o em vários blocos
+	2. Faça rodadas (Folds) alternadas entre "Validação" e "Treino"
+
+Ruído Positivo nos dados de Validação
+	Depende do:
+		- Problema
+		- Dados
+		- Modelo
+		- Número de medidas (Ex: 5-fold, 10-fold...)

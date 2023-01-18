@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Campo Minado Online - Game</title>
+    <link href="styles/main-style.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/game-style.css" rel="stylesheet" type="text/css"/>
+    <link href="styles/footer-style.css" rel="stylesheet" type="text/css"/>
+    <script src="scripts/formulario-game.js"></script>
+    <script src="scripts/time.js"></script>
+    <script src="scripts/game.js"></script>
+    <script src="scripts/game-manager.js"></script>
+    <!-- Importando fontes Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/icons/iconweb-bomb.ico"/>
+  </head>
+
+  <body>
+
+    <!-- Cabeçalho -->
+    <header>
+      <h1>Campo Minado Online</h1>
+      <!-- Menu -->
+      <div class="menu">
+        <a href="game.html"  class="side-two">
+          <img src="images/icons/square-matrix.png" alt="logout">
+          <p>Game</p>
+        </a>
+        <a href="ranking.html" class="side-two">
+          <img src="images/icons/crown_byFreepik.png" alt="ranking">
+          <p>Ranking</p>
+        </a>
+        <a href="edit-profile.html"  class="side-two">
+          <img src="images/icons/editing_byFreepik.png" alt="editar-perfil">
+          <p>Editar Perfil</p>
+        </a>
+        <a href="index.html"  class="side-two">
+          <img src="images/icons/logout_byFreepik.png" alt="logout">
+          <p>Sair</p>
+        </a>
+      </div>
+    </header>
+
+    <!-- Painel do game (Game & Historico) -->
+    <section class="sec-panel sec-game">
+
+        <!-- Game -->
+        <h2>Campo Minado</h2>
+        <hr>
+
+        <!-- Opções do Jogo -->
+        <section class="game-settings">
+          <h4>Escolha seu jogo:</h4>
+
+          <!-- Formulário para definir Jogo -->
+          <form name="formulario-jogo" onsubmit="return initGameButton()">
+            <!-- Organizar as opções em linha -->
+            <div class="form-options">
+              <!-- TabSize -->
+              <div>
+                <img src="images/icons/square-matrix.png" alt="tamanho-tabuleiro">
+                <select name="tabsize" onchange="updateBombsOptions();">
+                  <option value="5x5">5x5</option>
+                  <option value="5x6">5x6</option>
+                  <option value="6x6">6x6</option>
+                  <option value="7x7">7x7</option>
+                  <option value="8x8">8x8</option>
+                  <option value="9x9">9x9</option>
+                  <option value="10x10">10x10</option>
+                  <option value="15x15">15x15</option>
+                </select>
+              </div>
+              <!-- Quantidade de Bombas -->
+              <div>
+                <img src="images/icons/round-bomb_byFreepik.png" alt="numero-bombas">
+                <select id="select-bombas" name="qtdbombs">
+                  <option value='3'>3</option>
+                </select>
+              </div>
+              <!-- Modo Jogo -->
+              <div>
+                <img src="images/icons/rubik_byFreepik.png" alt="modo-jogo">
+                <select name="mode">
+                  <option value="classic">Clássico</option>
+                  <option value="rivotril">Rivotril</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Botão para definir Jogo -->
+            <input id="form-button" type="submit" value="Iniciar Jogo">
+          </form>
+        </section>
+
+        <!-- Informações da Partida -->
+        <section id="game-info">
+          <h4>Partida:</h4>
+
+          <!-- Tempos -->
+          <div class="game-time">
+            <!-- Tempo Jogado -->
+            <div class="side-two" id="game-div-stopwatch">
+              <img src="images/icons/clock.png" alt="tempo-decorrido">
+              <p id="stopwatch">--.--.--</p>
+            </div>
+
+            <!-- Timer (Se for Modo Rivotril) -->
+            <div class="side-two" id="game-div-timer">
+              <img src="images/icons/timer_byFreepik.png" alt="timer">
+              <p id="timer">--.--.--</p>
+            </div>
+          </div>
+
+          <!-- Botão de Trapaça -->
+          <div class="side-two active-trap" onclick="ativarTrapaca();">
+            <img src="images/icons/target_bySmashicons.png" alt="trapaca">
+            <p>Ativar Trapaça</p>
+          </div>
+
+          <!-- Pontuação do Player -->
+          <p id="p-score">Pontuação: xx</p>
+          <!-- Número de Células Abertas -->
+          <p id="p-opencells">Células abertas: xx</p>
+        </section>
+
+        <!-- Implementar Tabuleiro Aqui -->
+        <table id="tabela"></table>
+        
+        <!-- Historico Jogadores -->
+        <h2>Histórico</h2>
+        <hr>
+
+        <!-- Conteudo Partida -->
+        <section class="sec-hist">
+            <!-- Primeira linha de conteudos(3) -->
+            <div class="hist-row">
+              <!-- Player Name -->
+              <h4 class="to-left">username_1</h4>
+              <!-- Game Status -->
+              <h4 class="game-status">VITÓRIA</h4>
+              <!-- Played Date -->
+              <div class="side-two to-right">
+                  <img src="images/icons/calendar_byFreepik.png" alt="tamanho-tabuleiro">
+                  <p>10/09/2021</p>
+              </div>
+            </div>
+
+            <!-- Segunda linha de conteudos(4) -->
+            <div class="hist-row hist-row2">
+              <!-- TabSize -->
+              <div class="side-two to-left">
+                  <img src="images/icons/square-matrix.png" alt="coroa-dourada">
+                  <p>8x8</p>
+              </div>
+              <!-- Quantidade de Bombas -->
+              <div class="side-two">
+                  <img src="images/icons/round-bomb_byFreepik.png" alt="numero-bombas">
+                  <p>3</p>
+                </div>
+              <!-- Game Mode -->
+              <div class="side-two">
+                  <img src="images/icons/rubik_byFreepik.png" alt="modo-jogo">
+                  <p>Rivotril</p>
+                </div>
+              <!-- Time Played -->
+              <div class="side-two to-right">
+                  <img src="images/icons/clock.png" alt="tempo-jogado">
+                  <p>36min 20s</p>
+              </div>
+            </div>
+        </section>
+        <hr class="hist-line">
+
+        <!-- Conteudo Partida -->
+        <section class="sec-hist">
+            <!-- Primeira linha de conteudos(3) -->
+            <div class="hist-row">
+              <!-- Player Name -->
+              <h4 class="to-left">username_1</h4>
+              <!-- Game Status -->
+              <h4 class="game-status">DERROTA</h4>
+              <!-- Played Date -->
+              <div class="side-two to-right">
+                  <img src="images/icons/calendar_byFreepik.png" alt="tamanho-tabuleiro">
+                  <p>02/09/2021</p>
+              </div>
+            </div>
+
+            <!-- Segunda linha de conteudos(4) -->
+            <div class="hist-row hist-row2">
+              <!-- TabSize -->
+              <div class="side-two to-left">
+                  <img src="images/icons/square-matrix.png" alt="coroa-dourada">
+                  <p>10x10</p>
+              </div>
+              <!-- Quantidade de Bombas -->
+              <div class="side-two">
+                  <img src="images/icons/round-bomb_byFreepik.png" alt="numero-bombas">
+                  <p>10</p>
+                </div>
+              <!-- Game Mode -->
+              <div class="side-two">
+                  <img src="images/icons/rubik_byFreepik.png" alt="modo-jogo">
+                  <p>Clássico</p>
+                </div>
+              <!-- Time Played -->
+              <div class="side-two to-right">
+                  <img src="images/icons/clock.png" alt="tempo-jogado">
+                  <p>999hrs 59min 59s</p>
+              </div>
+            </div>
+        </section>
+        <hr class="hist-line">
+
+        <!-- Conteudo Partida -->
+        <section class="sec-hist">
+            <!-- Primeira linha de conteudos(3) -->
+            <div class="hist-row">
+              <!-- Player Name -->
+              <h4 class="to-left">username_1</h4>
+              <!-- Game Status -->
+              <h4 class="game-status">VITÓRIA</h4>
+              <!-- Played Date -->
+              <div class="side-two to-right">
+                  <img src="images/icons/calendar_byFreepik.png" alt="tamanho-tabuleiro">
+                  <p>01/09/2021</p>
+              </div>
+            </div>
+
+            <!-- Segunda linha de conteudos(4) -->
+            <div class="hist-row hist-row2">
+              <!-- TabSize -->
+              <div class="side-two to-left">
+                  <img src="images/icons/square-matrix.png" alt="coroa-dourada">
+                  <p>9x9</p>
+              </div>
+              <!-- Quantidade de Bombas -->
+              <div class="side-two">
+                  <img src="images/icons/round-bomb_byFreepik.png" alt="numero-bombas">
+                  <p>11</p>
+                </div>
+              <!-- Game Mode -->
+              <div class="side-two">
+                  <img src="images/icons/rubik_byFreepik.png" alt="modo-jogo">
+                  <p>Clássico</p>
+                </div>
+              <!-- Time Played -->
+              <div class="side-two to-right">
+                  <img src="images/icons/clock.png" alt="tempo-jogado">
+                  <p>999hrs 59min 59s</p>
+              </div>
+            </div>
+        </section>
+        <hr class="hist-line">
+
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <!-- Rodapé principal -->
+        <div class="ft-topics">
+            <!-- About -->
+            <section class="ft-about">
+                <h3>SOBRE</h3>
+                <p>Website do jogo Campo Minado desenvolvido na disciplina de Programação para a Web na FT - Unicamp.</p>
+            </section>
+            <!-- Devs -->
+            <section class="ft-devs">
+                <h3>DESENVOLVEDORES</h3>
+                <ul>
+                    <li>Caio Masseu</li>
+                    <li>Jonatas Goes</li>
+                    <li>Matheus Silva</li>
+                    <li>Victor Shirasuna</li>
+                </ul>
+            </section>
+        </div>
+      
+        <!-- Rodapé inferior -->
+        <div class="ft-info">
+            <p>SI401 - Programação Web 2021 - Grupo 8</p>
+        </div>
+    </footer>
+
+  </body>
+</html>
+        

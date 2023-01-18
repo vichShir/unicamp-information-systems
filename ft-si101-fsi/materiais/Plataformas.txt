@@ -1,0 +1,20 @@
+- Tensorflow
+- Xgboost
+- Pytorch
+- Azure (nuvem com Jupyter Notebook)
+- AWS (Python)
+- Sci-kit
+
+* Machine Learning (Aprendizado de Máquina)
+	- Subárea da Inteligência Articial
+	- Meio para construção de modelos de dados
+	* Aprendizado supervisionado: dados rotulados
+	* Aprendizado não supervisionado: sem criar rótulos; classificar os dados em grupos (clusterização)
+	* Aprendizado por reforço
+
+* Supervisionado:
+	- Regressão:
+		Linear
+		Logistica
+	- Redes neurais (Regra da cadeia & Derivar)
+	- Árvores de decisão

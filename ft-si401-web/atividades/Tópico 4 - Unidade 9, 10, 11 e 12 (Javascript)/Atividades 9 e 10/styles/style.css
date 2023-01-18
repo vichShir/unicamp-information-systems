@@ -1,0 +1,70 @@
+/**
+ * Author: Victor Yukio Shirasuna, RA: 245155
+ * Folha de Estilo para Jogo da Velha
+ */
+
+section{
+	width: 40%;
+	height: 500px;
+	background-color: #74b9ff;
+	margin: auto;
+	margin-top: 6%;
+	text-align: center;
+	padding: 10px;
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+	font-family: 'Arial';
+	color: #FFF;
+}
+
+h1{
+	font-size: 2em;
+	margin-bottom: 0;
+}
+
+hr{
+	width: 30%;
+	border: 1px solid #FFF;
+	box-shadow: rgba(27, 31, 35, 0.04) 0px 1px 0px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+}
+
+table{
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	margin: auto;
+}
+
+td{
+	width: 33%;
+	height: 33%;
+	font-weight: bold;
+}
+
+#vez-jogador{
+	padding: 12px;
+	margin-top: 60px;
+}
+
+.ver-line{
+	border-left: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+}
+
+.hor-line{
+	border-top: 1px solid #FFF;
+	border-bottom: 1px solid #FFF;
+}
+
+footer{
+	height: 28px;
+	background-color: #2d3436;
+	text-align: center;
+	color: #FFF;
+	font-family: Arial;
+	margin: auto;
+	padding: 12px;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+}
